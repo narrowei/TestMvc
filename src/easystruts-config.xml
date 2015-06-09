@@ -1,0 +1,9 @@
+<action-mappings>
+	<action path="/doOne" type="com.etc.actions.DoOneAction">
+		<forward name="one" path="/one.jsp" redirect="false"/>
+	</action>
+	
+	<action path="/doTwo" type="com.etc.actions.DoTwoAction">
+		<forward name="two" path="/two.jsp" redirect="true"/>
+	</action>
+</action-mappings>

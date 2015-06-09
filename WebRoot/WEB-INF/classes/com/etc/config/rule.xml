@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digester-rules>
+	<pattern value="action-mappings">
+		<pattern value="action">
+			<!-- 每碰到一个action元素，都需要创建指定的对象 -->
+			<object-create-rule classname="com.etc.config.ActionMapping" />
+			<!-- 对象创建完成后，调用指定的方法
+			将其加入到它上一级元素对应的对象中去 -->
+			<set-next-rule methodname="addActionMapping" />
+			<!-- 将action元素的属性按照相同的名称赋值给刚刚创建的ActionMapping -->
+			<set-properties-rule />
+			<pattern value="forward">
+				<object-create-rule classname="com.etc.config.ForwardBean" />
+				<set-next-rule methodname="addForwardBean" />
+				<set-properties-rule />
+			</pattern>
+
+		</pattern>
+	</pattern>
+
+
+</digester-rules>

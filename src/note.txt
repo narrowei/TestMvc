@@ -1,0 +1,9 @@
+digester解析
+1.编写与要解析的配置文件对应的java类
+2.编写一个解析规则文件 rule.xml(告诉digester如何将要解析的配置文件生成对象树)
+3.解析，得到对象树，程序可以访问对象树
+
+{
+/doTwo=com.etc.config.ActionMapping@1081d2e, 
+/doOne=com.etc.config.ActionMapping@1b3f829
+}
